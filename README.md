@@ -1,6 +1,8 @@
 # Spack configuration files for multiple HPC centers
 
-Supported HPC:
+Uses system (gcc, intel) and (mpt, openmpi, intel).
+
+# Supported HPC:
 
  - Mustang
  
