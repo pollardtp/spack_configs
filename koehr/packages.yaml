@@ -4,17 +4,13 @@ packages:
     modules:
       mpt@2.20: mpt/2.20
   openmpi:
-    version:   [3.1.3]
+    version:   [1.10.4]
     modules:
-      openmpi@3.1.3: openmpi/3.1.3/gcc-8.2.0
-  intelmpi:
-    version:   [2017.4.196]
-    modules:
-      intelmpi@2017.4.196: compiler/intelmpi/2017.4.196
+      openmpi@1.10.4: compiler/openmpi/1.10.4
   all:
-    compiler: [gcc, intel]
+    compiler: [gccl]
     providers:
-      blas: [openblas, intel-mkl]
-      lapack: [openblas, intel-mkl]
-      mpi: [mpt@2.20, openmpi@3.1.3, intelmpi@2017.4.196]
+      blas: [openblas]
+      lapack: [openblas]
+      mpi: [mpt@2.20, openmpi@1.10.4]
 

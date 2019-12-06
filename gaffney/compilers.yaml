@@ -24,14 +24,14 @@ compilers:
     target: x86_64
     modules: []
     environment: {}
-    extra_rpaths:  []
+    extra_rpaths: []
 - compiler:
-    spec: intel@18.0.1
+    spec: intel@19.0.4.243
     paths:
-      cc: /p/app/intel/parallel_studio_xe_2018_update1/compilers_and_libraries_2018.1.163/linux/bin/intel64/icc
-      cxx: /p/app/intel/parallel_studio_xe_2018_update1/compilers_and_libraries_2018.1.163/linux/bin/intel64/icpc
-      f77: /p/app/intel/parallel_studio_xe_2018_update1/compilers_and_libraries_2018.1.163/linux/bin/intel64/ifort
-      fc: /p/app/intel/parallel_studio_xe_2018_update1/compilers_and_libraries_2018.1.163/linux/bin/intel64/ifort
+      cc: /p/app/intel/parallel_studio_xe_2019_update4/compilers_and_libraries/linux/bin/intel64/icc
+      cxx: /p/app/intel/parallel_studio_xe_2019_update4/compilers_and_libraries/linux/bin/intel64/icpc
+      f77: /p/app/intel/parallel_studio_xe_2019_update4/compilers_and_libraries/linux/bin/intel64/ifort
+      fc: /p/app/intel/parallel_studio_xe_2019_update4/compilers_and_libraries/linux/bin/intel64/ifort
     flags: {}
     operating_system: rhel7
     target: x86_64
