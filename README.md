@@ -4,9 +4,7 @@ Supported HPC:
 
  - Mustang
  
- - Koehr
-  
- - Gaffney
+ - Koehr/Gaffney
  
  - Conrad/Gordon
 
