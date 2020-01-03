@@ -3,14 +3,10 @@ packages:
     version:   [2.20]
     modules:
       mpt@2.20: mpt/2.20
-  openmpi:
-    version:   [2.1.2]
-    modules:
-      openmpi@2.1.2: compiler/openmpi/2.1.2
   all:
     compiler: [gcc]
     providers:
-      blas: [openblas]
-      lapack: [openblas]
-      mpi: [mpt@2.20, openmpi@2.1.2]
+      blas: [mkl, openblas]
+      lapack: [mkl, openblas]
+      mpi: [mpt]
 
