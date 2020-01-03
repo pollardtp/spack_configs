@@ -8,5 +8,6 @@ packages:
     providers:
       blas: [mkl, openblas]
       lapack: [mkl, openblas]
+      scalapack: [mkl, netlib-scalapack]
       mpi: [mpt]
 
