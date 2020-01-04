@@ -1,16 +1,20 @@
 # Spack configuration files for multiple HPC centers
 
-Uses system (gcc, intel) and (mpt, openmpi, intel).
+- Defaults to highest available system GCC and MPI (MPT, Cray)
 
-# Supported HPC:
+- Replaces conda entirely (ase, psi4)
 
- - Mustang
+# Production ready HPC:
  
  - Koehr/Gaffney
- 
- - Conrad/Gordon
 
  - Centennial
+ 
+# Anticipated HPC:
+
+ - Mustang
+  
+ - Conrad/Gordon
 
 # Instructions
 
