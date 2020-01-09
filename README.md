@@ -6,13 +6,11 @@
 
 # Production ready HPC:
  
- - Koehr/Gaffney
+ - HPE: Koehr/Gaffney/Mustang
 
- - Centennial
+ - Cray: Centennial
  
 # Anticipated HPC:
-
- - Mustang
   
  - Conrad/Gordon
 
