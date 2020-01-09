@@ -19,8 +19,4 @@ for pkg in ${pkg_list[@]}; do
 done
 
 # chemistry
-pkg_list=("cp2k +mpi~openmp+elpa+libxc+plumed lmax=5 blas=mkl")
-for pkg in ${pkg_list[@]}; do
-        $spack_exe install $pkg
-done
-
+$spack_exe install cp2k +mpi~openmp+elpa+libxc+plumed lmax=5 blas=mkl
