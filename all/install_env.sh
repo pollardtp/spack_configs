@@ -13,13 +13,13 @@ if [ -z $spack_exe ];
 fi
 
 # python
-pkg_list=("python" "py-ase" "py-mdanalysis" "py-matplotlib" "py-maestrowf" "py-gpaw+mpi+fftw+scalapack")
+pkg_list=("python@3.7.4" "python@2.7.16" "py-ase" "py-mdanalysis" "py-matplotlib" "py-maestrowf" "py-gpaw+mpi+fftw+scalapack")
 for pkg in ${pkg_list[@]}; do
 	$spack_exe install $pkg
 done
 
-# chemistry, also installs python 2.X
-pkg_list=("nwchem" "cp2k +mpi~openmp+elpa+libxc+plumed+sirius lmax=5 blas=mkl")
+# chemistry
+pkg_list=("cp2k +mpi~openmp+elpa+libxc+plumed lmax=5 blas=mkl")
 for pkg in ${pkg_list[@]}; do
         $spack_exe install $pkg
 done
