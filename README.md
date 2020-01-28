@@ -40,9 +40,8 @@ Download and install in ~/.spack on respective supercomputers.
             ])
 ```
 
-For py-ase, matplotlib is needed. py-pillow doesn't compile correctly, so
+For py-ase, matplotlib is needed which is dependent on py-pillow. py-pillow doesn't compile correctly with -O3 optimizations, so
 
 ```spack edit py-matplotlib```
 
-Change image from True to False.
-
+Change image from True to False. I don't need it anyways.
