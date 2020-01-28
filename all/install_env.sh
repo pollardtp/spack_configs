@@ -13,10 +13,7 @@ if [ -z $spack_exe ];
 fi
 
 # python
-pkg_list=("python@3.7.4" "python@2.7.16" "py-ase" "py-mdanalysis" "py-matplotlib" "py-maestrowf" "py-gpaw+mpi+fftw+scalapack")
+pkg_list=("py-ase" "cp2k+mpi~openmp+elpa+libxc lmax=5 smm=libxsmm blas=openblas" "psi4")
 for pkg in ${pkg_list[@]}; do
 	$spack_exe install $pkg
 done
-
-# chemistry
-$spack_exe install cp2k +mpi~openmp+elpa+libxc+plumed lmax=5 blas=mkl
