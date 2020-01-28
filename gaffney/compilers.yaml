@@ -20,10 +20,10 @@ compilers:
       f77: /p/app/gnu/8.2.0/bin/gfortran
       fc: /p/app/gnu/8.2.0/bin/gfortran
     flags:
-      cflags: -O2 -march=native
-      cxxflags: -O2 -march=native
-      fflags: -O2 -march=native
-      f90flags: -O2 -march=native
+      cflags: -O3 -march=native
+      cxxflags: -O3 -march=native
+      fflags: -O3 -march=native
+      f90flags: -O3 -march=native
     operating_system: rhel7
     target: x86_64
     modules: []

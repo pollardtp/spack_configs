@@ -1,13 +1,13 @@
 packages:
-  mpt:
-    version:   [2.20]
-    modules:
-      mpt@2.20: mpt/2.20
+#  mpt:
+#    version:   [2.20]
+#    modules:
+#      mpt@2.20: mpt/2.20
   all:
     compiler: [gcc]
     providers:
-      blas: [mkl, openblas]
-      lapack: [mkl, openblas]
-      scalapack: [mkl, netlib-scalapack]
-      mpi: [mpt]
+      blas: [openblas, mkl, netlib-blas]
+      lapack: [openblas, netlib-lapack]
+      scalapack: [netlib-scalapack, mkl]
+      mpi: [openmpi, mpt]
 
