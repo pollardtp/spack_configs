@@ -1,14 +1,22 @@
 # Spack configuration files for multiple HPC centers
 
-- Defaults to highest available system GCC and MPI (MPT, Cray)
+- Download (```spack edit gcc``` set preferred gcc-8.2.0) or ```module purge; module load gcc/8.2.0```
 
-- Replaces conda entirely (ase, psi4)
+- Download openmpi through spack, set as preferred mpi in packages.yaml
+
+- Edit elpa and cp2k to disable mpi mod
+
+- Edit py-matplotlib to set Image to False
+
+```spack install py-ase cp2k+mpi~openmp+libxc+elpa lmax=5 smm=libxsmm blas=openblas psi4```
+
+- Psi4 install will break due to too long a shebang, just find the binary and install the module in packages.yaml
 
 # Production ready HPC:
  
  - HPE: Koehr/Gaffney/Mustang
 
- - Cray: Centennial
+ - Cray: Centennial/Excalibur/Onyx
  
 # Anticipated HPC:
   
@@ -19,8 +27,6 @@
 Download and install in ~/.spack on respective supercomputers.
 
 # Notes
-
-### All HPC when using mpt
 
 ```spack edit elpa```
 
@@ -43,5 +49,3 @@ Download and install in ~/.spack on respective supercomputers.
 For py-ase, matplotlib is needed which is dependent on py-pillow. py-pillow doesn't compile correctly with -O3 optimizations, so
 
 ```spack edit py-matplotlib```
-
-Change image from True to False. I don't need it anyways.
