@@ -39,3 +39,10 @@ Download and install in ~/.spack on respective supercomputers.
                 '-D__HAS_NO_MPI_MOD' # add this
             ])
 ```
+
+For py-ase, matplotlib is needed. py-pillow doesn't compile correctly, so
+
+```spack edit py-matplotlib```
+
+Change image from True to False.
+
