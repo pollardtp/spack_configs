@@ -50,12 +50,12 @@ For py-ase, matplotlib is needed which is dependent on py-pillow. py-pillow does
 
 # ORCA
 
-Download binaries from website, extract, add to packages.yaml,
+Download binaries from website, extract (```mkdir bin; mv * bin/```), add to packages.yaml,
 
 ```  
 orca:
   paths:
-    orca@4.2.1: /p/home/teep/.local_programs/orca_4_2_1_linux_x86-64_openmpi314
+    orca@4.2.1: /p/home/teep/.local_programs/orca_4_2_1_linux_x86-64_openmpi314/bin
   buildable: false
 ```
 
