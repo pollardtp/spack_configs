@@ -8,7 +8,7 @@
 
 - Edit py-matplotlib to set Image to False
 
-```spack install py-ase cp2k+mpi~openmp+libxc+elpa lmax=5 smm=libxsmm blas=openblas psi4```
+```spack install py-ase cp2k +mpi~openmp+elpa+libxc smm=libxsmm lmax=5 blas=openblas ^openmpi@3.1.5~cuda+cxx_exceptions fabrics=psm2 ~java~legacylaunchers~memchecker~pmi schedulers=tm +sqlite3+thread_multiple+vt psi4```
 
 - Psi4 install will break due to too long a shebang, just find the binary and install the module in packages.yaml
 
