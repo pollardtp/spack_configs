@@ -24,6 +24,21 @@
 
 Download and install in ~/.spack on respective supercomputers.
 
+# Keeping up to date
+
+```
+update_spack_configs () {
+ ping=`pwd`
+ if [ -d $HOME/.local_programs/spack_configs ]; then
+  cd $HOME/.local_programs/spack_configs
+  git pull
+ else
+  git clone https://github.com/pollardtp/spack_configs.git $HOME/.local_programs/spack_configs
+ fi
+ cd $ping
+}
+```
+
 # Notes
 
 ```spack edit elpa```
@@ -63,11 +78,6 @@ Then execute ```spack install orca``` to generate the module file.
 
 # Psi4
 
-Spack post-install patch appears broken, doesn't work, and the shebang line is too long so the binary doesn't work without editing.
+Obtain through conda.
 
-```  
-psi4:
-  paths:
-    psi4@master: /p/home/teep/.local_programs/psi4
-  buildable: false
-```
+```spack install miniconda3; spack load miniconda3; conda install -c psi4 psi4```
