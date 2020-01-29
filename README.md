@@ -8,9 +8,7 @@
 
 - Edit py-matplotlib to set Image to False
 
-```spack install py-ase cp2k +mpi~openmp+elpa+libxc smm=libxsmm lmax=5 blas=openblas ^openmpi@3.1.5~cuda+cxx_exceptions fabrics=psm2 ~java~legacylaunchers~memchecker~pmi schedulers=tm +sqlite3+thread_multiple+vt psi4```
-
-- Psi4 install will break due to too long a shebang, just find the binary and install the module in packages.yaml
+```spack install py-ase cp2k +mpi~openmp+elpa+libxc smm=libxsmm lmax=5 blas=openblas ^openmpi@3.1.5~cuda+cxx_exceptions fabrics=psm2 ~java~legacylaunchers~memchecker~pmi schedulers=tm +sqlite3+thread_multiple+vt```
 
 # Production ready HPC:
  
@@ -49,3 +47,27 @@ Download and install in ~/.spack on respective supercomputers.
 For py-ase, matplotlib is needed which is dependent on py-pillow. py-pillow doesn't compile correctly with -O3 optimizations, so
 
 ```spack edit py-matplotlib```
+
+# ORCA
+
+Download binaries from website, extract, add to packages.yaml,
+
+```  
+orca:
+  paths:
+    orca@4.2.1: /p/home/teep/.local_programs/orca_4_2_1_linux_x86-64_openmpi314
+  buildable: false
+```
+
+Then execute ```spack install orca``` to generate the module file.
+
+# Psi4
+
+Spack post-install patch appears broken, doesn't work, and the shebang line is too long so the binary doesn't work without editing.
+
+```  
+psi4:
+  paths:
+    psi4@master: /p/home/teep/.local_programs/psi4
+  buildable: false
+```
