@@ -16,10 +16,6 @@
 
  - Cray: Centennial/Excalibur/Onyx
  
-# Anticipated HPC:
-  
- - Conrad/Gordon
-
 # Instructions
 
 Download and install in ~/.spack on respective supercomputers.
