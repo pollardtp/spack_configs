@@ -1,20 +1,16 @@
 packages:
-  mpt:
-    version:   [2.20]
-    modules:
-      mpt@2.20: mpt/2.20
+  orca:
+    paths:
+      orca@4.2.1: /p/home/teep/.local_programs/orca_4_2_1_linux_x86-64_openmpi314/bin
+    buildable: false
   openmpi:
-    version:   [3.1.3]
-    modules:
-      openmpi@3.1.3: openmpi/3.1.3/gcc-8.2.0
-  intelmpi:
-    version:   [2017.4.196]
-    modules:
-      intelmpi@2017.4.196: compiler/intelmpi/2017.4.196
+    version:  [3.1.6]
+    variants: ~cuda+cxx_exceptions fabrics=psm2 schedulers=tm +sqlite3+thread_multiple+vt
   all:
-    compiler: [gcc, intel]
+    compiler: [gcc]
     providers:
-      blas: [openblas, intel-mkl]
-      lapack: [openblas, intel-mkl]
-      mpi: [mpt@2.20, openmpi@3.1.3, intelmpi@2017.4.196]
+      blas: [openblas, mkl, netlib-blas]
+      lapack: [openblas, netlib-lapack]
+      scalapack: [netlib-scalapack, mkl]
+      mpi: [openmpi, mpt]
 
