@@ -21,14 +21,14 @@ fi
 
 if [ $cluster == "koehr" -o $cluster == "gaffney" -o $cluster == "mustang" ]; then
  # download python based packages, no mpi
- pkg_list=("py-ase" "py-mdanalysis" "git" "py-pip" "miniconda3" "py-scikit-learn" "py-scikit-optimize" "openbabel" "packmol" "py-moltemplate" "openbabel")
+ pkg_list=("py-ase" "py-mdanalysis" "git" "py-pip" "miniconda3" "py-numpy" "py-scipy" "py-scikit-learn" "py-scikit-optimize" "openbabel" "packmol" "py-moltemplate" "py-mdanalysis" "py-spglib" "py-seaborn" "julia")
  for pkg in ${pkg_list[@]}; do
      $spack_exe install $pkg
  done
 
- # grab psi4 binary with conda
+ # grab pymatgen binary with conda
  spack load miniconda3
- conda install -c psi4 psi4
+ conda install -c conda-forge pymatgen
 else
  echo "Cluster not currently fully supported."
 fi
